@@ -1,0 +1,73 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider / JetBrains
+.idea/
+
+# Build output
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]64/
+Win32/
+
+# Logs
+*.log
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+.nuget/
+
+# Test / coverage output
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+# MSIX / AppX packaging artifacts
+AppPackages/
+BundleArtifacts/
+*.appx
+*.appxbundle
+*.appxupload
+*.msix
+*.msixbundle
+*.msixupload
+*.cer
+*.pfx
+
+# Generated app package registration artifacts
+AppxManifest.xml
+resources.pri
+*.build.appxrecipe
+
+# Generated source / caches
+*.cache
+*.g.cs
+*.g.i.cs
+*.genruntimeconfig.cache
+*.AssemblyInfo.cs
+*.AssemblyInfoInputs.cache
+*.GeneratedMSBuildEditorConfig.editorconfig
+*.csproj.CoreCompileInputs.cache
+*.csproj.AssemblyReference.cache
+*.csproj.FileListAbsolute.txt
+*.assets.cache
+*.Up2Date
+*.sourcelink.json
+*.editorconfig.bak
+.winmd_cache/
+
+# Windows / OS files
+Thumbs.db
+Desktop.ini
+

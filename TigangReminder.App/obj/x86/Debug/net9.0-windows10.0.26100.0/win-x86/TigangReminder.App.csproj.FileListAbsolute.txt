@@ -1,1 +1,0 @@
-C:\kzq\学习\tigang\TigangReminder.App\obj\x86\Debug\net9.0-windows10.0.26100.0\win-x86\TigangReminder.App.csproj.AssemblyReference.cache

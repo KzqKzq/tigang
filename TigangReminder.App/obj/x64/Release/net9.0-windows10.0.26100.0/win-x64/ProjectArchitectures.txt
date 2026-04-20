@@ -1,1 +1,0 @@
-C:\kzq\学习\tigang\TigangReminder.App\TigangReminder.App.csproj;x64
