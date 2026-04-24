@@ -1,6 +1,9 @@
 {
   "profiles": {
-    "TigangReminder.App": {
+    "TigangReminder.App (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "TigangReminder.App (Unpackaged)": {
       "commandName": "Project"
     }
   }

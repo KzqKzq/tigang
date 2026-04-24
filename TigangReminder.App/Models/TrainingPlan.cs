@@ -9,7 +9,7 @@ public partial class TrainingPlan : ObservableObject
     private string id = Guid.NewGuid().ToString("N");
 
     [ObservableProperty]
-    private string name = "晨间激活";
+    private string name = "晨间唤醒";
 
     [ObservableProperty]
     private string description = "适合开始建立习惯的轻量练习。";

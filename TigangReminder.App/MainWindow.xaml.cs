@@ -1,6 +1,7 @@
 using System.Runtime.InteropServices;
 using CommunityToolkit.WinUI.Notifications;
 using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
 using TigangReminder_App.Services;
 using TigangReminder_App.ViewModels;
 using WinRT.Interop;
@@ -35,11 +36,13 @@ public sealed partial class MainWindow : Window
     private const int TrayCommandExit = 1003;
 
     private readonly MainViewModel _viewModel;
+    private readonly DebugLogService _debugLogService;
     private readonly nint _hwnd;
     private readonly WindowProc _newWindowProc;
     private readonly nint _iconHandle;
     private nint _oldWndProc;
     private bool _allowClose;
+    private bool _isUpdatingApiKeyBox;
 
     public MainWindow()
     {
@@ -49,11 +52,14 @@ public sealed partial class MainWindow : Window
         SetTitleBar(AppTitleBar);
         AppWindow.SetIcon("Assets/AppIcon.ico");
 
+        _debugLogService = new DebugLogService();
+
         _viewModel = new MainViewModel(
             new StorageService(),
             new NotificationService(),
             new AiPlanService(),
-            DispatcherQueue);
+            DispatcherQueue,
+            _debugLogService);
 
         RootLayout.DataContext = _viewModel;
         Activated += OnWindowActivated;
@@ -86,7 +92,7 @@ public sealed partial class MainWindow : Window
         var parsed = ToastArguments.Parse(arguments);
         if (parsed.TryGetValue("action", out var action) && action == "open-training")
         {
-            RootTabs.SelectedItem = TrainingTab;
+            RootNav.SelectedItem = NavTraining;
         }
     }
 
@@ -94,6 +100,7 @@ public sealed partial class MainWindow : Window
     {
         Activated -= OnWindowActivated;
         await _viewModel.InitializeAsync();
+        SyncApiKeyPasswordBox();
     }
 
     private void OnHideToTrayClick(object sender, RoutedEventArgs e)
@@ -181,7 +188,7 @@ public sealed partial class MainWindow : Window
                     break;
                 case TrayCommandStartTraining:
                     RestoreFromTray();
-                    RootTabs.SelectedItem = TrainingTab;
+                    RootNav.SelectedItem = NavTraining;
                     _viewModel.StartTrainingFromShell();
                     break;
                 case TrayCommandExit:
@@ -204,6 +211,83 @@ public sealed partial class MainWindow : Window
         data.szInfoTitle = title;
         data.szInfo = message;
         Shell_NotifyIcon(NIM_MODIFY, ref data);
+    }
+
+    private void RootNav_Loaded(object sender, RoutedEventArgs e)
+    {
+        RootNav.SelectedItem = NavOverview;
+        SwitchContent("Overview");
+        SyncApiKeyPasswordBox();
+    }
+
+    private void RootNav_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
+    {
+        if (args.IsSettingsSelected)
+        {
+            SwitchContent("Settings");
+        }
+        else if (args.SelectedItem is NavigationViewItem item)
+        {
+            SwitchContent(item.Tag?.ToString());
+        }
+    }
+
+    private void SwitchContent(string? tag)
+    {
+        if (tag == null) return;
+
+        OverviewContent.Visibility = Visibility.Collapsed;
+        PlanContent.Visibility = Visibility.Collapsed;
+        TrainingContent.Visibility = Visibility.Collapsed;
+        AiContent.Visibility = Visibility.Collapsed;
+        SettingsContent.Visibility = Visibility.Collapsed;
+
+        switch (tag)
+        {
+            case "Overview": OverviewContent.Visibility = Visibility.Visible; break;
+            case "Plan": PlanContent.Visibility = Visibility.Visible; break;
+            case "Training": TrainingContent.Visibility = Visibility.Visible; break;
+            case "Ai": AiContent.Visibility = Visibility.Visible; break;
+            case "Settings": SettingsContent.Visibility = Visibility.Visible; break;
+        }
+
+        if (tag == "Settings")
+        {
+            SyncApiKeyPasswordBox();
+        }
+    }
+
+    private void ApiKeyPasswordBox_Loaded(object sender, RoutedEventArgs e)
+    {
+        SyncApiKeyPasswordBox();
+    }
+
+    private void ApiKeyPasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+    {
+        if (_isUpdatingApiKeyBox || sender is not PasswordBox passwordBox)
+        {
+            return;
+        }
+
+        _viewModel.Settings.AiSettings.ApiKey = passwordBox.Password;
+    }
+
+    private void SyncApiKeyPasswordBox()
+    {
+        if (ApiKeyPasswordBox is null)
+        {
+            return;
+        }
+
+        _isUpdatingApiKeyBox = true;
+        try
+        {
+            ApiKeyPasswordBox.Password = _viewModel.Settings.AiSettings.ApiKey ?? string.Empty;
+        }
+        finally
+        {
+            _isUpdatingApiKeyBox = false;
+        }
     }
 
     private NOTIFYICONDATA CreateTrayData()

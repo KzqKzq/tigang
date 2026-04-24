@@ -19,9 +19,13 @@
     <SolidColorBrush x:Key="PanelBackgroundBrush" Color="#B3FFFFFF" />
     <SolidColorBrush x:Key="MutedTextBrush" Color="#FF5D686A" />
     <SolidColorBrush x:Key="StrokeSoftBrush" Color="#1C172123" />
+    <SolidColorBrush x:Key="DashboardHeroBrush" Color="#FFF1E7D8" />
+    <SolidColorBrush x:Key="DashboardSoftBrush" Color="#FFF9F5EE" />
+    <SolidColorBrush x:Key="DashboardAccentWashBrush" Color="#FFE6EEE7" />
 
     <Thickness x:Key="PagePadding">28</Thickness>
-    <CornerRadius x:Key="CardCornerRadius">24</CornerRadius>
+    <CornerRadius x:Key="CardCornerRadius">8</CornerRadius>
+    <CornerRadius x:Key="ControlCornerRadius">6</CornerRadius>
 
     <Style x:Key="HeroTitleTextStyle" TargetType="TextBlock">
         <Setter Property="FontSize" Value="34" />
@@ -34,6 +38,19 @@
         <Setter Property="FontSize" Value="24" />
         <Setter Property="FontWeight" Value="SemiBold" />
         <Setter Property="Foreground" Value="{StaticResource BrandInkBrush}" />
+    </Style>
+
+    <Style x:Key="DashboardMetricValueTextStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="34" />
+        <Setter Property="FontWeight" Value="SemiBold" />
+        <Setter Property="Foreground" Value="{StaticResource BrandInkBrush}" />
+    </Style>
+
+    <Style x:Key="DashboardMetricCaptionTextStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="Foreground" Value="{StaticResource MutedTextBrush}" />
+        <Setter Property="TextWrapping" Value="Wrap" />
     </Style>
 
     <Style x:Key="EyebrowTextStyle" TargetType="TextBlock">
@@ -54,14 +71,14 @@
     <Style x:Key="AccentButtonStyle" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Background" Value="{StaticResource BrandCoralBrush}" />
         <Setter Property="Foreground" Value="White" />
-        <Setter Property="CornerRadius" Value="14" />
+        <Setter Property="CornerRadius" Value="{StaticResource ControlCornerRadius}" />
         <Setter Property="Padding" Value="18,10" />
     </Style>
 
     <Style x:Key="SubtleButtonStyle" TargetType="Button" BasedOn="{StaticResource DefaultButtonStyle}">
         <Setter Property="Background" Value="{StaticResource BrandMintBrush}" />
         <Setter Property="Foreground" Value="{StaticResource BrandInkBrush}" />
-        <Setter Property="CornerRadius" Value="14" />
+        <Setter Property="CornerRadius" Value="{StaticResource ControlCornerRadius}" />
         <Setter Property="Padding" Value="16,10" />
     </Style>
 </ResourceDictionary>

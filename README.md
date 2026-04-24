@@ -2,7 +2,7 @@
 
 基于 `WinUI 3 + Windows App SDK` 的 Win11 原生桌面应用。
 
-当前工程已切换为“未打包开发模式”，优先支持纯终端 `dotnet run`。
+当前工程保留 `WinUI 3` 打包模型。在这台机器上不建议使用 `dotnet run` 做未打包启动，纯终端开发请使用“打包-安装-启动”脚本。
 
 ## 当前功能
 
@@ -20,13 +20,28 @@
 ## 终端开发
 
 ```powershell
-dotnet run --project .\TigangReminder.App\TigangReminder.App.csproj -p:Platform=x64
+.\scripts\dev-run.ps1
 ```
+
+这条命令会自动：
+
+- 生成或复用开发证书
+- 信任证书到 `CurrentUser\TrustedPeople`
+- 打包 `msix`
+- 卸载旧版本
+- 安装新版本
+- 启动应用
 
 ## 开发构建
 
 ```powershell
-dotnet build .\TigangReminder.App\TigangReminder.App.csproj -p:Platform=x64
+.\scripts\dev-build.ps1
+```
+
+## 清理
+
+```powershell
+.\scripts\dev-clean.ps1
 ```
 
 ## 文件夹发布
@@ -43,7 +58,5 @@ dotnet publish .\TigangReminder.App\TigangReminder.App.csproj -p:Platform=x64 -c
 
 - 关闭窗口或最小化窗口时，可在设置页切换是否转入托盘后台。
 - AI 工坊中未配置 API 时，会自动回退到本地建议计划。
-
-## 已知事项
-
-- 当前仓库优先服务于纯终端开发；如果后续需要正式分发的 `msix` 安装包，建议单独增加一个 packaging 项目。
+- 如果脚本提示文件被占用，先执行 `.\scripts\dev-clean.ps1` 再重新运行。
+- 不要再用 `dotnet run` 直接启动当前工程。

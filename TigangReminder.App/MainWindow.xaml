@@ -13,6 +13,223 @@
     </Window.SystemBackdrop>
 
     <Grid x:Name="RootLayout" Background="{StaticResource PageBackgroundBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="WindowSizeStates">
+                <VisualState x:Name="NarrowWindow">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="RootNav.PaneDisplayMode" Value="LeftCompact" />
+                        <Setter Target="OverviewMetricsCol1.Width" Value="*" />
+                        <Setter Target="OverviewMetricsCol2.Width" Value="0" />
+                        <Setter Target="OverviewMetricsCol3.Width" Value="0" />
+                        <Setter Target="OverviewMetricsCol4.Width" Value="0" />
+                        <Setter Target="OverviewNextReminderCard.(Grid.Column)" Value="0" />
+                        <Setter Target="OverviewNextReminderCard.(Grid.Row)" Value="0" />
+                        <Setter Target="OverviewActivePlansCard.(Grid.Column)" Value="0" />
+                        <Setter Target="OverviewActivePlansCard.(Grid.Row)" Value="1" />
+                        <Setter Target="OverviewCompletedCard.(Grid.Column)" Value="0" />
+                        <Setter Target="OverviewCompletedCard.(Grid.Row)" Value="2" />
+                        <Setter Target="OverviewStreakCard.(Grid.Column)" Value="0" />
+                        <Setter Target="OverviewStreakCard.(Grid.Row)" Value="3" />
+                        <Setter Target="OverviewLastCompletedText.Visibility" Value="Collapsed" />
+                        <Setter Target="OverviewTotalMinutesText.Visibility" Value="Collapsed" />
+                        <Setter Target="OverviewListsCol1.Width" Value="*" />
+                        <Setter Target="OverviewListsCol2.Width" Value="0" />
+                        <Setter Target="OverviewUpcomingCard.(Grid.Column)" Value="0" />
+                        <Setter Target="OverviewUpcomingCard.(Grid.Row)" Value="0" />
+                        <Setter Target="OverviewHistoryCard.(Grid.Column)" Value="0" />
+                        <Setter Target="OverviewHistoryCard.(Grid.Row)" Value="1" />
+                        <Setter Target="PlanShellCol1.Width" Value="*" />
+                        <Setter Target="PlanShellCol2.Width" Value="0" />
+                        <Setter Target="PlanListCard.(Grid.Column)" Value="0" />
+                        <Setter Target="PlanListCard.(Grid.Row)" Value="0" />
+                        <Setter Target="PlanListCard.(Grid.RowSpan)" Value="1" />
+                        <Setter Target="PlanDetailCard.(Grid.Column)" Value="0" />
+                        <Setter Target="PlanDetailCard.(Grid.Row)" Value="1" />
+                        <Setter Target="PlanDetailCard.(Grid.RowSpan)" Value="1" />
+                        <Setter Target="PlanStatsCol1.Width" Value="*" />
+                        <Setter Target="PlanStatsCol2.Width" Value="0" />
+                        <Setter Target="PlanStatsCol3.Width" Value="0" />
+                        <Setter Target="PlanContractBox.(Grid.Column)" Value="0" />
+                        <Setter Target="PlanContractBox.(Grid.Row)" Value="0" />
+                        <Setter Target="PlanRelaxBox.(Grid.Column)" Value="0" />
+                        <Setter Target="PlanRelaxBox.(Grid.Row)" Value="1" />
+                        <Setter Target="PlanCyclesBox.(Grid.Column)" Value="0" />
+                        <Setter Target="PlanCyclesBox.(Grid.Row)" Value="2" />
+                        <Setter Target="ReminderInputCol1.Width" Value="*" />
+                        <Setter Target="ReminderInputCol2.Width" Value="0" />
+                        <Setter Target="PlanReminderInput.(Grid.Column)" Value="0" />
+                        <Setter Target="PlanReminderInput.(Grid.Row)" Value="0" />
+                        <Setter Target="PlanReminderAddButton.(Grid.Column)" Value="0" />
+                        <Setter Target="PlanReminderAddButton.(Grid.Row)" Value="1" />
+                        <Setter Target="PlanActionButtons.Orientation" Value="Vertical" />
+                        <Setter Target="TrainingShellCol1.Width" Value="*" />
+                        <Setter Target="TrainingShellCol2.Width" Value="0" />
+                        <Setter Target="TrainingVisualizerCard.(Grid.Column)" Value="0" />
+                        <Setter Target="TrainingVisualizerCard.(Grid.Row)" Value="0" />
+                        <Setter Target="TrainingVisualizerCard.(Grid.RowSpan)" Value="1" />
+                        <Setter Target="TrainingSideCard.(Grid.Column)" Value="0" />
+                        <Setter Target="TrainingSideCard.(Grid.Row)" Value="1" />
+                        <Setter Target="TrainingSideCard.(Grid.RowSpan)" Value="1" />
+                        <Setter Target="TrainingPhaseHintText.Visibility" Value="Collapsed" />
+                        <Setter Target="TrainingPlanDescriptionText.Visibility" Value="Collapsed" />
+                        <Setter Target="TrainingGuidanceText.Visibility" Value="Collapsed" />
+                        <Setter Target="AiMetaCol1.Width" Value="*" />
+                        <Setter Target="AiMetaCol2.Width" Value="0" />
+                        <Setter Target="AiExperienceBox.(Grid.Column)" Value="0" />
+                        <Setter Target="AiExperienceBox.(Grid.Row)" Value="0" />
+                        <Setter Target="AiMinutesBox.(Grid.Column)" Value="0" />
+                        <Setter Target="AiMinutesBox.(Grid.Row)" Value="1" />
+                        <Setter Target="AiActionButtons.Orientation" Value="Vertical" />
+                        <Setter Target="SettingsActionButtons.Orientation" Value="Vertical" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="MediumWindow">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="760" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="RootNav.PaneDisplayMode" Value="Auto" />
+                        <Setter Target="OverviewMetricsCol1.Width" Value="*" />
+                        <Setter Target="OverviewMetricsCol2.Width" Value="*" />
+                        <Setter Target="OverviewMetricsCol3.Width" Value="0" />
+                        <Setter Target="OverviewMetricsCol4.Width" Value="0" />
+                        <Setter Target="OverviewNextReminderCard.(Grid.Column)" Value="0" />
+                        <Setter Target="OverviewNextReminderCard.(Grid.Row)" Value="0" />
+                        <Setter Target="OverviewActivePlansCard.(Grid.Column)" Value="1" />
+                        <Setter Target="OverviewActivePlansCard.(Grid.Row)" Value="0" />
+                        <Setter Target="OverviewCompletedCard.(Grid.Column)" Value="0" />
+                        <Setter Target="OverviewCompletedCard.(Grid.Row)" Value="1" />
+                        <Setter Target="OverviewStreakCard.(Grid.Column)" Value="1" />
+                        <Setter Target="OverviewStreakCard.(Grid.Row)" Value="1" />
+                        <Setter Target="OverviewLastCompletedText.Visibility" Value="Visible" />
+                        <Setter Target="OverviewTotalMinutesText.Visibility" Value="Visible" />
+                        <Setter Target="OverviewListsCol1.Width" Value="*" />
+                        <Setter Target="OverviewListsCol2.Width" Value="0" />
+                        <Setter Target="OverviewUpcomingCard.(Grid.Column)" Value="0" />
+                        <Setter Target="OverviewUpcomingCard.(Grid.Row)" Value="0" />
+                        <Setter Target="OverviewHistoryCard.(Grid.Column)" Value="0" />
+                        <Setter Target="OverviewHistoryCard.(Grid.Row)" Value="1" />
+                        <Setter Target="PlanShellCol1.Width" Value="*" />
+                        <Setter Target="PlanShellCol2.Width" Value="0" />
+                        <Setter Target="PlanListCard.(Grid.Column)" Value="0" />
+                        <Setter Target="PlanListCard.(Grid.Row)" Value="0" />
+                        <Setter Target="PlanListCard.(Grid.RowSpan)" Value="1" />
+                        <Setter Target="PlanDetailCard.(Grid.Column)" Value="0" />
+                        <Setter Target="PlanDetailCard.(Grid.Row)" Value="1" />
+                        <Setter Target="PlanDetailCard.(Grid.RowSpan)" Value="1" />
+                        <Setter Target="PlanStatsCol1.Width" Value="*" />
+                        <Setter Target="PlanStatsCol2.Width" Value="*" />
+                        <Setter Target="PlanStatsCol3.Width" Value="*" />
+                        <Setter Target="PlanContractBox.(Grid.Column)" Value="0" />
+                        <Setter Target="PlanContractBox.(Grid.Row)" Value="0" />
+                        <Setter Target="PlanRelaxBox.(Grid.Column)" Value="1" />
+                        <Setter Target="PlanRelaxBox.(Grid.Row)" Value="0" />
+                        <Setter Target="PlanCyclesBox.(Grid.Column)" Value="2" />
+                        <Setter Target="PlanCyclesBox.(Grid.Row)" Value="0" />
+                        <Setter Target="ReminderInputCol1.Width" Value="*" />
+                        <Setter Target="ReminderInputCol2.Width" Value="Auto" />
+                        <Setter Target="PlanReminderInput.(Grid.Column)" Value="0" />
+                        <Setter Target="PlanReminderInput.(Grid.Row)" Value="0" />
+                        <Setter Target="PlanReminderAddButton.(Grid.Column)" Value="1" />
+                        <Setter Target="PlanReminderAddButton.(Grid.Row)" Value="0" />
+                        <Setter Target="PlanActionButtons.Orientation" Value="Horizontal" />
+                        <Setter Target="TrainingShellCol1.Width" Value="*" />
+                        <Setter Target="TrainingShellCol2.Width" Value="0" />
+                        <Setter Target="TrainingVisualizerCard.(Grid.Column)" Value="0" />
+                        <Setter Target="TrainingVisualizerCard.(Grid.Row)" Value="0" />
+                        <Setter Target="TrainingVisualizerCard.(Grid.RowSpan)" Value="1" />
+                        <Setter Target="TrainingSideCard.(Grid.Column)" Value="0" />
+                        <Setter Target="TrainingSideCard.(Grid.Row)" Value="1" />
+                        <Setter Target="TrainingSideCard.(Grid.RowSpan)" Value="1" />
+                        <Setter Target="TrainingPhaseHintText.Visibility" Value="Visible" />
+                        <Setter Target="TrainingPlanDescriptionText.Visibility" Value="Visible" />
+                        <Setter Target="TrainingGuidanceText.Visibility" Value="Visible" />
+                        <Setter Target="AiMetaCol1.Width" Value="*" />
+                        <Setter Target="AiMetaCol2.Width" Value="*" />
+                        <Setter Target="AiExperienceBox.(Grid.Column)" Value="0" />
+                        <Setter Target="AiExperienceBox.(Grid.Row)" Value="0" />
+                        <Setter Target="AiMinutesBox.(Grid.Column)" Value="1" />
+                        <Setter Target="AiMinutesBox.(Grid.Row)" Value="0" />
+                        <Setter Target="AiActionButtons.Orientation" Value="Horizontal" />
+                        <Setter Target="SettingsActionButtons.Orientation" Value="Horizontal" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="WideWindow">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1200" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="RootNav.PaneDisplayMode" Value="Auto" />
+                        <Setter Target="OverviewMetricsCol1.Width" Value="*" />
+                        <Setter Target="OverviewMetricsCol2.Width" Value="*" />
+                        <Setter Target="OverviewMetricsCol3.Width" Value="*" />
+                        <Setter Target="OverviewMetricsCol4.Width" Value="*" />
+                        <Setter Target="OverviewNextReminderCard.(Grid.Column)" Value="0" />
+                        <Setter Target="OverviewNextReminderCard.(Grid.Row)" Value="0" />
+                        <Setter Target="OverviewActivePlansCard.(Grid.Column)" Value="1" />
+                        <Setter Target="OverviewActivePlansCard.(Grid.Row)" Value="0" />
+                        <Setter Target="OverviewCompletedCard.(Grid.Column)" Value="2" />
+                        <Setter Target="OverviewCompletedCard.(Grid.Row)" Value="0" />
+                        <Setter Target="OverviewStreakCard.(Grid.Column)" Value="3" />
+                        <Setter Target="OverviewStreakCard.(Grid.Row)" Value="0" />
+                        <Setter Target="OverviewLastCompletedText.Visibility" Value="Visible" />
+                        <Setter Target="OverviewTotalMinutesText.Visibility" Value="Visible" />
+                        <Setter Target="OverviewListsCol1.Width" Value="1.2*" />
+                        <Setter Target="OverviewListsCol2.Width" Value="0.8*" />
+                        <Setter Target="OverviewUpcomingCard.(Grid.Column)" Value="0" />
+                        <Setter Target="OverviewUpcomingCard.(Grid.Row)" Value="0" />
+                        <Setter Target="OverviewHistoryCard.(Grid.Column)" Value="1" />
+                        <Setter Target="OverviewHistoryCard.(Grid.Row)" Value="0" />
+                        <Setter Target="PlanShellCol1.Width" Value="320" />
+                        <Setter Target="PlanShellCol2.Width" Value="*" />
+                        <Setter Target="PlanListCard.(Grid.Column)" Value="0" />
+                        <Setter Target="PlanListCard.(Grid.Row)" Value="0" />
+                        <Setter Target="PlanListCard.(Grid.RowSpan)" Value="2" />
+                        <Setter Target="PlanDetailCard.(Grid.Column)" Value="1" />
+                        <Setter Target="PlanDetailCard.(Grid.Row)" Value="0" />
+                        <Setter Target="PlanDetailCard.(Grid.RowSpan)" Value="2" />
+                        <Setter Target="PlanStatsCol1.Width" Value="*" />
+                        <Setter Target="PlanStatsCol2.Width" Value="*" />
+                        <Setter Target="PlanStatsCol3.Width" Value="*" />
+                        <Setter Target="PlanContractBox.(Grid.Column)" Value="0" />
+                        <Setter Target="PlanContractBox.(Grid.Row)" Value="0" />
+                        <Setter Target="PlanRelaxBox.(Grid.Column)" Value="1" />
+                        <Setter Target="PlanRelaxBox.(Grid.Row)" Value="0" />
+                        <Setter Target="PlanCyclesBox.(Grid.Column)" Value="2" />
+                        <Setter Target="PlanCyclesBox.(Grid.Row)" Value="0" />
+                        <Setter Target="ReminderInputCol1.Width" Value="*" />
+                        <Setter Target="ReminderInputCol2.Width" Value="Auto" />
+                        <Setter Target="PlanReminderInput.(Grid.Column)" Value="0" />
+                        <Setter Target="PlanReminderInput.(Grid.Row)" Value="0" />
+                        <Setter Target="PlanReminderAddButton.(Grid.Column)" Value="1" />
+                        <Setter Target="PlanReminderAddButton.(Grid.Row)" Value="0" />
+                        <Setter Target="PlanActionButtons.Orientation" Value="Horizontal" />
+                        <Setter Target="TrainingShellCol1.Width" Value="1.2*" />
+                        <Setter Target="TrainingShellCol2.Width" Value="*" />
+                        <Setter Target="TrainingVisualizerCard.(Grid.Column)" Value="0" />
+                        <Setter Target="TrainingVisualizerCard.(Grid.Row)" Value="0" />
+                        <Setter Target="TrainingVisualizerCard.(Grid.RowSpan)" Value="2" />
+                        <Setter Target="TrainingSideCard.(Grid.Column)" Value="1" />
+                        <Setter Target="TrainingSideCard.(Grid.Row)" Value="0" />
+                        <Setter Target="TrainingSideCard.(Grid.RowSpan)" Value="2" />
+                        <Setter Target="TrainingPhaseHintText.Visibility" Value="Visible" />
+                        <Setter Target="TrainingPlanDescriptionText.Visibility" Value="Visible" />
+                        <Setter Target="TrainingGuidanceText.Visibility" Value="Visible" />
+                        <Setter Target="AiMetaCol1.Width" Value="*" />
+                        <Setter Target="AiMetaCol2.Width" Value="*" />
+                        <Setter Target="AiExperienceBox.(Grid.Column)" Value="0" />
+                        <Setter Target="AiExperienceBox.(Grid.Row)" Value="0" />
+                        <Setter Target="AiMinutesBox.(Grid.Column)" Value="1" />
+                        <Setter Target="AiMinutesBox.(Grid.Row)" Value="0" />
+                        <Setter Target="AiActionButtons.Orientation" Value="Horizontal" />
+                        <Setter Target="SettingsActionButtons.Orientation" Value="Horizontal" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
@@ -24,144 +241,261 @@
             </TitleBar.IconSource>
         </TitleBar>
 
-        <TabView
-            x:Name="RootTabs"
+        <NavigationView
+            x:Name="RootNav"
             Grid.Row="1"
-            Margin="20"
-            CanDragTabs="False"
-            CanReorderTabs="False"
-            TabWidthMode="Equal">
+            PaneDisplayMode="Auto"
+            IsBackButtonVisible="Collapsed"
+            IsSettingsVisible="True"
+            Loaded="RootNav_Loaded"
+            SelectionChanged="RootNav_SelectionChanged"
+            AlwaysShowHeader="False">
 
-            <TabViewItem Header="总览">
-                <ScrollViewer VerticalScrollBarVisibility="Auto">
-                    <StackPanel Spacing="18" Padding="8">
-                        <Border Style="{StaticResource CardBorderStyle}" Background="{StaticResource BrandSandBrush}">
-                            <StackPanel Spacing="10">
-                                <TextBlock Style="{StaticResource EyebrowTextStyle}" Text="Win11 Native Daily Flow" />
-                                <TextBlock Style="{StaticResource HeroTitleTextStyle}" Text="把提肛提醒、训练节律和恢复习惯放进一个原生 Win11 应用里。" />
-                                <TextBlock Foreground="{StaticResource MutedTextBrush}" Text="支持系统通知、后台常驻、AI 计划建议和训练完成统计。" TextWrapping="Wrap" />
-                                <StackPanel Orientation="Horizontal" Spacing="12">
-                                    <Button Command="{Binding StartTrainingCommand}" Content="开始训练" Style="{StaticResource AccentButtonStyle}" />
-                                    <Button Command="{Binding TestToastCommand}" Content="测试通知" Style="{StaticResource SubtleButtonStyle}" />
-                                    <Button Click="OnHideToTrayClick" Content="隐藏到托盘" />
-                                </StackPanel>
-                            </StackPanel>
-                        </Border>
+            <NavigationView.MenuItems>
+                <NavigationViewItem x:Name="NavTraining" Content="训练" Tag="Training">
+                    <NavigationViewItem.Icon>
+                        <SymbolIcon Symbol="Play" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem x:Name="NavOverview" Content="总览" Tag="Overview">
+                    <NavigationViewItem.Icon>
+                        <SymbolIcon Symbol="Home" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem x:Name="NavPlan" Content="计划" Tag="Plan">
+                    <NavigationViewItem.Icon>
+                        <SymbolIcon Symbol="Calendar" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem x:Name="NavAi" Content="AI 工坊" Tag="Ai">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE904;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
 
-                        <Grid ColumnSpacing="16">
+            <Grid>
+                <ScrollViewer x:Name="OverviewContent" Visibility="Collapsed" VerticalScrollBarVisibility="Auto">
+                    <StackPanel Spacing="18" Padding="24,20,24,24">
+                        <Grid ColumnSpacing="16" RowSpacing="16">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition x:Name="OverviewMetricsCol1" Width="*" />
+                                <ColumnDefinition x:Name="OverviewMetricsCol2" Width="*" />
+                                <ColumnDefinition x:Name="OverviewMetricsCol3" Width="*" />
+                                <ColumnDefinition x:Name="OverviewMetricsCol4" Width="*" />
                             </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
 
-                            <Border Grid.Column="0" Style="{StaticResource CardBorderStyle}">
-                                <StackPanel>
-                                    <TextBlock Style="{StaticResource EyebrowTextStyle}" Text="下一次提醒" />
-                                    <TextBlock Margin="0,8,0,0" FontSize="20" FontWeight="SemiBold" Text="{Binding NextReminderSummary}" TextWrapping="Wrap" />
-                                </StackPanel>
+                            <Border x:Name="OverviewNextReminderCard" Grid.Column="0" Style="{StaticResource CardBorderStyle}" Background="{StaticResource DashboardHeroBrush}" BorderBrush="#26B8563D">
+                                <Grid RowSpacing="14">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid ColumnSpacing="10">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Style="{StaticResource EyebrowTextStyle}" Text="下一次提醒" />
+                                        <Border Grid.Column="1" Padding="10,4" Background="#33B8563D" CornerRadius="{StaticResource ControlCornerRadius}">
+                                            <TextBlock FontSize="11" FontWeight="SemiBold" Foreground="{StaticResource BrandCoralBrush}" Text="节律窗口" />
+                                        </Border>
+                                    </Grid>
+                                    <TextBlock Grid.Row="1" FontSize="28" FontWeight="SemiBold" LineHeight="36" Text="{Binding NextReminderSummary}" TextWrapping="WrapWholeWords" />
+                                    <TextBlock Grid.Row="2" Style="{StaticResource DashboardMetricCaptionTextStyle}" Text="保持固定训练窗口，比零散提醒更容易形成日常习惯。" />
+                                </Grid>
                             </Border>
-                            <Border Grid.Column="1" Style="{StaticResource CardBorderStyle}">
-                                <StackPanel>
+
+                            <Border x:Name="OverviewActivePlansCard" Grid.Column="1" Style="{StaticResource CardBorderStyle}" Background="{StaticResource DashboardSoftBrush}">
+                                <StackPanel Spacing="10">
                                     <TextBlock Style="{StaticResource EyebrowTextStyle}" Text="启用中的计划" />
-                                    <TextBlock Margin="0,8,0,0" FontSize="28" FontWeight="SemiBold" Text="{Binding ActivePlanCount}" />
+                                    <TextBlock Style="{StaticResource DashboardMetricValueTextStyle}" Text="{Binding ActivePlanCount}" />
+                                    <TextBlock Style="{StaticResource DashboardMetricCaptionTextStyle}" Text="当前参与提醒与训练的计划数" />
                                 </StackPanel>
                             </Border>
-                            <Border Grid.Column="2" Style="{StaticResource CardBorderStyle}">
-                                <StackPanel>
+
+                            <Border x:Name="OverviewCompletedCard" Grid.Column="2" Style="{StaticResource CardBorderStyle}">
+                                <StackPanel Spacing="10">
                                     <TextBlock Style="{StaticResource EyebrowTextStyle}" Text="累计完成" />
-                                    <TextBlock Margin="0,8,0,0" FontSize="28" FontWeight="SemiBold" Text="{Binding TotalSessionsCompleted}" />
-                                    <TextBlock Foreground="{StaticResource MutedTextBrush}" Text="{Binding LastCompletedText}" TextWrapping="Wrap" />
+                                    <TextBlock Style="{StaticResource DashboardMetricValueTextStyle}" Text="{Binding TotalSessionsCompleted}" />
+                                    <TextBlock x:Name="OverviewLastCompletedText" Style="{StaticResource DashboardMetricCaptionTextStyle}" Text="{Binding LastCompletedText}" />
                                 </StackPanel>
                             </Border>
-                            <Border Grid.Column="3" Style="{StaticResource CardBorderStyle}">
-                                <StackPanel>
-                                    <TextBlock Style="{StaticResource EyebrowTextStyle}" Text="连续天数 / 总分钟" />
-                                    <TextBlock Margin="0,8,0,0" FontSize="28" FontWeight="SemiBold" Text="{Binding CurrentStreakDays}" />
-                                    <TextBlock Foreground="{StaticResource MutedTextBrush}" Text="{Binding TotalMinutesSummary}" />
+
+                            <Border x:Name="OverviewStreakCard" Grid.Column="3" Style="{StaticResource CardBorderStyle}" Background="{StaticResource DashboardAccentWashBrush}">
+                                <StackPanel Spacing="10">
+                                    <TextBlock Style="{StaticResource EyebrowTextStyle}" Text="连续天数" />
+                                    <TextBlock Style="{StaticResource DashboardMetricValueTextStyle}" Text="{Binding CurrentStreakDays}" />
+                                    <TextBlock x:Name="OverviewTotalMinutesText" Style="{StaticResource DashboardMetricCaptionTextStyle}" Text="{Binding TotalMinutesSummary}" />
                                 </StackPanel>
                             </Border>
                         </Grid>
 
-                        <Grid ColumnSpacing="16">
+                        <Grid ColumnSpacing="16" RowSpacing="16">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="1.2*" />
-                                <ColumnDefinition Width="0.8*" />
+                                <ColumnDefinition x:Name="OverviewListsCol1" Width="1.2*" />
+                                <ColumnDefinition x:Name="OverviewListsCol2" Width="0.8*" />
                             </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
 
-                            <Border Grid.Column="0" Style="{StaticResource CardBorderStyle}">
-                                <StackPanel Spacing="14">
-                                    <TextBlock Style="{StaticResource SectionTitleTextStyle}" Text="即将到来的提醒" />
-                                    <ListView ItemsSource="{Binding UpcomingReminders}" SelectionMode="None">
+                            <Border x:Name="OverviewUpcomingCard" Grid.Column="0" Style="{StaticResource CardBorderStyle}">
+                                <StackPanel Spacing="16">
+                                    <Grid ColumnSpacing="12">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <StackPanel Spacing="4">
+                                            <TextBlock Style="{StaticResource SectionTitleTextStyle}" Text="即将到来的提醒" />
+                                            <TextBlock Style="{StaticResource DashboardMetricCaptionTextStyle}" Text="未来 7 天的节律时间，按先后顺序排列。" />
+                                        </StackPanel>
+                                        <Border Grid.Column="1" VerticalAlignment="Top" Padding="10,4" Background="{StaticResource DashboardAccentWashBrush}" CornerRadius="{StaticResource ControlCornerRadius}">
+                                            <TextBlock FontSize="11" FontWeight="SemiBold" Foreground="{StaticResource BrandSageBrush}" Text="未来 7 天" />
+                                        </Border>
+                                    </Grid>
+                                    <ListView ItemsSource="{Binding UpcomingReminders}" SelectionMode="None" Background="Transparent" BorderThickness="0">
                                         <ListView.ItemTemplate>
                                             <DataTemplate>
-                                                <Grid Padding="0,8">
-                                                    <Grid.ColumnDefinitions>
-                                                        <ColumnDefinition Width="*" />
-                                                        <ColumnDefinition Width="Auto" />
-                                                    </Grid.ColumnDefinitions>
-                                                    <StackPanel>
-                                                        <TextBlock FontSize="17" FontWeight="SemiBold" Text="{Binding PlanName}" />
-                                                        <TextBlock Foreground="{StaticResource MutedTextBrush}" Text="{Binding WhenText}" />
+                                                <Border Margin="0,0,0,10" Padding="14,12" Background="{StaticResource DashboardSoftBrush}" BorderBrush="#14000000" BorderThickness="1" CornerRadius="{StaticResource ControlCornerRadius}">
+                                                    <Grid ColumnSpacing="14">
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="*" />
+                                                            <ColumnDefinition Width="Auto" />
+                                                        </Grid.ColumnDefinitions>
+                                                        <StackPanel Spacing="3">
+                                                            <TextBlock FontSize="18" FontWeight="SemiBold" Text="{Binding PlanName}" />
+                                                            <TextBlock Style="{StaticResource DashboardMetricCaptionTextStyle}" Text="{Binding WhenText}" />
+                                                        </StackPanel>
+                                                        <Border Grid.Column="1" VerticalAlignment="Center" Padding="10,5" Background="#1F64796B" CornerRadius="{StaticResource ControlCornerRadius}">
+                                                            <TextBlock FontSize="12" FontWeight="SemiBold" Foreground="{StaticResource BrandSageBrush}" Text="{Binding RelativeText}" />
+                                                        </Border>
+                                                    </Grid>
+                                                </Border>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
+                                </StackPanel>
+                            </Border>
+
+                            <Border x:Name="OverviewHistoryCard" Grid.Column="1" Style="{StaticResource CardBorderStyle}">
+                                <StackPanel Spacing="16">
+                                    <StackPanel Spacing="4">
+                                        <TextBlock Style="{StaticResource SectionTitleTextStyle}" Text="最近训练记录" />
+                                        <TextBlock Style="{StaticResource DashboardMetricCaptionTextStyle}" Text="最近完成的节律训练会按时间倒序显示。" />
+                                    </StackPanel>
+                                    <ListView ItemsSource="{Binding SessionHistory}" SelectionMode="None" Background="Transparent" BorderThickness="0">
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <Border Margin="0,0,0,10" Padding="14,12" Background="{StaticResource DashboardSoftBrush}" BorderBrush="#14000000" BorderThickness="1" CornerRadius="{StaticResource ControlCornerRadius}">
+                                                    <StackPanel Spacing="4">
+                                                        <TextBlock FontSize="17" FontWeight="SemiBold" Text="{Binding Summary}" TextWrapping="Wrap" />
+                                                        <TextBlock Style="{StaticResource DashboardMetricCaptionTextStyle}" Text="{Binding CompletedText}" />
                                                     </StackPanel>
-                                                    <TextBlock Grid.Column="1" VerticalAlignment="Center" Foreground="{StaticResource BrandSageBrush}" Text="{Binding RelativeText}" />
-                                                </Grid>
+                                                </Border>
                                             </DataTemplate>
                                         </ListView.ItemTemplate>
                                     </ListView>
                                 </StackPanel>
                             </Border>
 
-                            <Border Grid.Column="1" Style="{StaticResource CardBorderStyle}">
-                                <StackPanel Spacing="14">
-                                    <TextBlock Style="{StaticResource SectionTitleTextStyle}" Text="最近训练记录" />
-                                    <ListView ItemsSource="{Binding SessionHistory}" SelectionMode="None">
-                                        <ListView.ItemTemplate>
-                                            <DataTemplate>
-                                                <StackPanel Padding="0,8">
-                                                    <TextBlock FontSize="16" FontWeight="SemiBold" Text="{Binding Summary}" />
-                                                    <TextBlock Foreground="{StaticResource MutedTextBrush}" Text="{Binding CompletedText}" />
-                                                </StackPanel>
-                                            </DataTemplate>
-                                        </ListView.ItemTemplate>
-                                    </ListView>
-                                </StackPanel>
-                            </Border>
+                            <Grid Grid.Row="1" Grid.ColumnSpan="2" ColumnSpacing="16">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Border Background="{StaticResource DashboardAccentWashBrush}" BorderBrush="#18000000" BorderThickness="1" CornerRadius="{StaticResource CardCornerRadius}" Padding="18">
+                                    <Grid ColumnSpacing="14">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Border Width="42" Height="42" Background="#2A64796B" CornerRadius="21" VerticalAlignment="Top">
+                                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" FontWeight="SemiBold" Foreground="{StaticResource BrandSageBrush}" Text="↗" />
+                                        </Border>
+                                        <StackPanel Grid.Column="1" Spacing="5">
+                                            <TextBlock Style="{StaticResource EyebrowTextStyle}" Text="训练趋势" />
+                                            <StackPanel Orientation="Horizontal" Spacing="6">
+                                                <TextBlock FontSize="22" FontWeight="SemiBold" Text="{Binding RecentSevenDaySessions}" />
+                                                <TextBlock VerticalAlignment="Bottom" Style="{StaticResource DashboardMetricCaptionTextStyle}" Text="最近 7 天完成" />
+                                            </StackPanel>
+                                            <TextBlock Style="{StaticResource DashboardMetricCaptionTextStyle}" Text="{Binding TrendSummary}" />
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
+
+                                <Border Grid.Column="1" Background="{StaticResource DashboardHeroBrush}" BorderBrush="#22B8563D" BorderThickness="1" CornerRadius="{StaticResource CardCornerRadius}" Padding="18">
+                                    <Grid ColumnSpacing="14">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Border Width="42" Height="42" Background="#33B8563D" CornerRadius="21" VerticalAlignment="Top">
+                                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" FontWeight="SemiBold" Foreground="{StaticResource BrandCoralBrush}" Text="♥" />
+                                        </Border>
+                                        <StackPanel Grid.Column="1" Spacing="5">
+                                            <TextBlock Style="{StaticResource EyebrowTextStyle}" Text="节律激励" />
+                                            <TextBlock FontSize="22" FontWeight="SemiBold" Text="继续保持" />
+                                            <TextBlock Style="{StaticResource DashboardMetricCaptionTextStyle}" Text="{Binding MotivationSummary}" />
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
+                            </Grid>
                         </Grid>
                     </StackPanel>
                 </ScrollViewer>
-            </TabViewItem>
 
-            <TabViewItem Header="计划">
-                <Grid ColumnSpacing="16" Padding="8">
+                <Grid x:Name="PlanContent" Visibility="Collapsed" ColumnSpacing="16" RowSpacing="16" Padding="24,20,24,24">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="320" />
-                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition x:Name="PlanShellCol1" Width="320" />
+                        <ColumnDefinition x:Name="PlanShellCol2" Width="*" />
                     </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
 
-                    <Border Grid.Column="0" Style="{StaticResource CardBorderStyle}">
-                        <StackPanel Spacing="14">
-                            <TextBlock Style="{StaticResource SectionTitleTextStyle}" Text="提醒计划" />
-                            <StackPanel Orientation="Horizontal" Spacing="10">
-                                <Button Command="{Binding AddPlanCommand}" Content="新增计划" Style="{StaticResource AccentButtonStyle}" />
-                                <Button Command="{Binding DeletePlanCommand}" Content="删除" Style="{StaticResource SubtleButtonStyle}" />
+                    <Border x:Name="PlanListCard" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource CardBorderStyle}" Background="{StaticResource DashboardSoftBrush}">
+                        <StackPanel Spacing="16">
+                            <StackPanel Spacing="4">
+                                <TextBlock Style="{StaticResource SectionTitleTextStyle}" Text="提醒计划" />
+                                <TextBlock Style="{StaticResource DashboardMetricCaptionTextStyle}" Text="先选一个计划，再调整右侧的节律细节。" />
                             </StackPanel>
-                            <ListView ItemsSource="{Binding Plans}" SelectedItem="{Binding SelectedPlan, Mode=TwoWay}">
+                            <Grid ColumnSpacing="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Button Command="{Binding AddPlanCommand}" Content="新增计划" Style="{StaticResource AccentButtonStyle}" />
+                                <Button Grid.Column="1" Command="{Binding DeletePlanCommand}" Content="删除" Style="{StaticResource SubtleButtonStyle}" />
+                            </Grid>
+                            <ListView ItemsSource="{Binding Plans}" SelectedItem="{Binding SelectedPlan, Mode=TwoWay}" Background="Transparent" BorderThickness="0">
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <Border
                                             Margin="0,0,0,12"
-                                            Padding="14"
-                                            Background="{StaticResource PanelBackgroundBrush}"
-                                            BorderBrush="{StaticResource StrokeSoftBrush}"
+                                            Padding="16"
+                                            Background="{StaticResource CardBackgroundBrush}"
+                                            BorderBrush="#18000000"
                                             BorderThickness="1"
-                                            CornerRadius="18">
-                                            <StackPanel Spacing="6">
+                                            CornerRadius="{StaticResource ControlCornerRadius}">
+                                            <StackPanel Spacing="8">
                                                 <TextBlock FontSize="18" FontWeight="SemiBold" Text="{Binding Name}" />
-                                                <TextBlock Foreground="{StaticResource MutedTextBrush}" Text="{Binding Description}" TextWrapping="Wrap" />
-                                                <TextBlock Foreground="{StaticResource BrandSageBrush}" Text="{Binding ReminderSummary}" />
-                                                <TextBlock Foreground="{StaticResource MutedTextBrush}" Text="{Binding DurationSummary}" />
+                                                <TextBlock Style="{StaticResource DashboardMetricCaptionTextStyle}" Text="{Binding Description}" TextWrapping="WrapWholeWords" MaxLines="2" />
+                                                <Border Padding="10,5" Background="{StaticResource DashboardAccentWashBrush}" CornerRadius="{StaticResource ControlCornerRadius}">
+                                                    <TextBlock FontSize="12" FontWeight="SemiBold" Foreground="{StaticResource BrandSageBrush}" Text="{Binding ReminderSummary}" TextWrapping="WrapWholeWords" />
+                                                </Border>
+                                                <TextBlock Style="{StaticResource DashboardMetricCaptionTextStyle}" Text="{Binding DurationSummary}" />
                                             </StackPanel>
                                         </Border>
                                     </DataTemplate>
@@ -170,72 +504,128 @@
                         </StackPanel>
                     </Border>
 
-                    <Border Grid.Column="1" Style="{StaticResource CardBorderStyle}">
+                    <Border x:Name="PlanDetailCard" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource CardBorderStyle}">
                         <ScrollViewer VerticalScrollBarVisibility="Auto">
-                            <StackPanel Spacing="18">
-                                <TextBlock Style="{StaticResource SectionTitleTextStyle}" Text="计划细节" />
-                                <ToggleSwitch Header="启用当前计划" IsOn="{Binding SelectedPlan.IsEnabled, Mode=TwoWay}" />
-                                <TextBox Header="计划名称" Text="{Binding SelectedPlan.Name, Mode=TwoWay}" />
-                                <TextBox Header="说明" Text="{Binding SelectedPlan.Description, Mode=TwoWay}" AcceptsReturn="True" TextWrapping="Wrap" />
-
-                                <Grid ColumnSpacing="12">
+                            <StackPanel Spacing="20">
+                                <Grid ColumnSpacing="16">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="*" />
-                                    </Grid.ColumnDefinitions>
-                                    <NumberBox Grid.Column="0" Header="收紧秒数" Minimum="2" Maximum="20" SpinButtonPlacementMode="Inline" Value="{Binding SelectedPlan.ContractSeconds, Mode=TwoWay}" />
-                                    <NumberBox Grid.Column="1" Header="放松秒数" Minimum="2" Maximum="20" SpinButtonPlacementMode="Inline" Value="{Binding SelectedPlan.RelaxSeconds, Mode=TwoWay}" />
-                                    <NumberBox Grid.Column="2" Header="轮数" Minimum="4" Maximum="60" SpinButtonPlacementMode="Inline" Value="{Binding SelectedPlan.Cycles, Mode=TwoWay}" />
-                                </Grid>
-
-                                <TextBlock Style="{StaticResource EyebrowTextStyle}" Text="每周生效日" />
-                                <Grid ColumnSpacing="10" RowSpacing="10">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto" />
-                                        <RowDefinition Height="Auto" />
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto" />
-                                        <ColumnDefinition Width="Auto" />
-                                        <ColumnDefinition Width="Auto" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
-                                    <ToggleButton Content="周一" IsChecked="{Binding SelectedPlan.Monday, Mode=TwoWay}" />
-                                    <ToggleButton Grid.Column="1" Content="周二" IsChecked="{Binding SelectedPlan.Tuesday, Mode=TwoWay}" />
-                                    <ToggleButton Grid.Column="2" Content="周三" IsChecked="{Binding SelectedPlan.Wednesday, Mode=TwoWay}" />
-                                    <ToggleButton Grid.Column="3" Content="周四" IsChecked="{Binding SelectedPlan.Thursday, Mode=TwoWay}" />
-                                    <ToggleButton Grid.Row="1" Content="周五" IsChecked="{Binding SelectedPlan.Friday, Mode=TwoWay}" />
-                                    <ToggleButton Grid.Row="1" Grid.Column="1" Content="周六" IsChecked="{Binding SelectedPlan.Saturday, Mode=TwoWay}" />
-                                    <ToggleButton Grid.Row="1" Grid.Column="2" Content="周日" IsChecked="{Binding SelectedPlan.Sunday, Mode=TwoWay}" />
+                                    <StackPanel Spacing="4">
+                                        <TextBlock Style="{StaticResource SectionTitleTextStyle}" Text="计划细节" />
+                                        <TextBlock Style="{StaticResource DashboardMetricCaptionTextStyle}" Text="把节律参数、提醒时间和生效日集中在一个地方调整。" />
+                                    </StackPanel>
+                                    <Border Grid.Column="1" Padding="14,10" Background="{StaticResource DashboardAccentWashBrush}" CornerRadius="{StaticResource ControlCornerRadius}">
+                                        <StackPanel Spacing="8">
+                                            <TextBlock FontSize="12" FontWeight="SemiBold" Foreground="{StaticResource BrandSageBrush}" Text="启用当前计划" />
+                                            <ToggleSwitch IsOn="{Binding SelectedPlan.IsEnabled, Mode=TwoWay}" />
+                                        </StackPanel>
+                                    </Border>
                                 </Grid>
 
-                                <TextBlock Style="{StaticResource EyebrowTextStyle}" Text="提醒时间" />
-                                <StackPanel Orientation="Horizontal" Spacing="10">
-                                    <TextBox Width="160" Header="新增时间" Text="{Binding NewReminderTimeText, Mode=TwoWay}" PlaceholderText="HH:mm" />
-                                    <Button VerticalAlignment="Bottom" Command="{Binding AddReminderTimeCommand}" Content="添加" Style="{StaticResource SubtleButtonStyle}" />
-                                </StackPanel>
-                                <ListView ItemsSource="{Binding SelectedPlan.ReminderTimes}">
-                                    <ListView.ItemTemplate>
-                                        <DataTemplate>
-                                            <Grid ColumnSpacing="10" Padding="0,0,0,8">
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="220" />
-                                                    <ColumnDefinition Width="Auto" />
-                                                </Grid.ColumnDefinitions>
-                                                <TextBox Header="提醒时间" Text="{Binding TimeText, Mode=TwoWay}" />
-                                                <Button
-                                                    Grid.Column="1"
-                                                    VerticalAlignment="Bottom"
-                                                    Command="{Binding DataContext.RemoveReminderTimeCommand, ElementName=RootLayout}"
-                                                    CommandParameter="{Binding}"
-                                                    Content="移除" />
-                                            </Grid>
-                                        </DataTemplate>
-                                    </ListView.ItemTemplate>
-                                </ListView>
+                                <Border Background="{StaticResource DashboardSoftBrush}" BorderBrush="#14000000" BorderThickness="1" CornerRadius="{StaticResource ControlCornerRadius}" Padding="16">
+                                    <StackPanel Spacing="14">
+                                        <TextBox Header="计划名称" Text="{Binding SelectedPlan.Name, Mode=TwoWay}" />
+                                        <TextBox Header="说明" Text="{Binding SelectedPlan.Description, Mode=TwoWay}" AcceptsReturn="True" TextWrapping="Wrap" />
+                                    </StackPanel>
+                                </Border>
 
-                                <StackPanel Orientation="Horizontal" Spacing="10">
+                                <Border Background="{StaticResource CardBackgroundBrush}" BorderBrush="#14000000" BorderThickness="1" CornerRadius="{StaticResource ControlCornerRadius}" Padding="16">
+                                    <StackPanel Spacing="14">
+                                        <TextBlock Style="{StaticResource EyebrowTextStyle}" Text="训练参数" />
+                                        <Grid ColumnSpacing="12" RowSpacing="12">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition x:Name="PlanStatsCol1" Width="*" />
+                                                <ColumnDefinition x:Name="PlanStatsCol2" Width="*" />
+                                                <ColumnDefinition x:Name="PlanStatsCol3" Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <NumberBox x:Name="PlanContractBox" Grid.Column="0" Header="收紧秒数" Minimum="2" Maximum="20" SpinButtonPlacementMode="Inline" Value="{Binding SelectedPlan.ContractSeconds, Mode=TwoWay}" />
+                                            <NumberBox x:Name="PlanRelaxBox" Grid.Column="1" Header="放松秒数" Minimum="2" Maximum="20" SpinButtonPlacementMode="Inline" Value="{Binding SelectedPlan.RelaxSeconds, Mode=TwoWay}" />
+                                            <NumberBox x:Name="PlanCyclesBox" Grid.Column="2" Header="轮数" Minimum="4" Maximum="60" SpinButtonPlacementMode="Inline" Value="{Binding SelectedPlan.Cycles, Mode=TwoWay}" />
+                                        </Grid>
+                                    </StackPanel>
+                                </Border>
+
+                                <Border Background="{StaticResource DashboardSoftBrush}" BorderBrush="#14000000" BorderThickness="1" CornerRadius="{StaticResource ControlCornerRadius}" Padding="16">
+                                    <StackPanel Spacing="14">
+                                        <TextBlock Style="{StaticResource EyebrowTextStyle}" Text="每周生效日" />
+                                        <Grid ColumnSpacing="10" RowSpacing="10">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <ToggleButton Content="周一" IsChecked="{Binding SelectedPlan.Monday, Mode=TwoWay}" />
+                                            <ToggleButton Grid.Column="1" Content="周二" IsChecked="{Binding SelectedPlan.Tuesday, Mode=TwoWay}" />
+                                            <ToggleButton Grid.Column="2" Content="周三" IsChecked="{Binding SelectedPlan.Wednesday, Mode=TwoWay}" />
+                                            <ToggleButton Grid.Column="3" Content="周四" IsChecked="{Binding SelectedPlan.Thursday, Mode=TwoWay}" />
+                                            <ToggleButton Grid.Row="1" Content="周五" IsChecked="{Binding SelectedPlan.Friday, Mode=TwoWay}" />
+                                            <ToggleButton Grid.Row="1" Grid.Column="1" Content="周六" IsChecked="{Binding SelectedPlan.Saturday, Mode=TwoWay}" />
+                                            <ToggleButton Grid.Row="1" Grid.Column="2" Content="周日" IsChecked="{Binding SelectedPlan.Sunday, Mode=TwoWay}" />
+                                        </Grid>
+                                    </StackPanel>
+                                </Border>
+
+                                <Border Background="{StaticResource CardBackgroundBrush}" BorderBrush="#14000000" BorderThickness="1" CornerRadius="{StaticResource ControlCornerRadius}" Padding="16">
+                                    <StackPanel Spacing="14">
+                                        <Grid ColumnSpacing="12">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <StackPanel Spacing="4">
+                                                <TextBlock Style="{StaticResource EyebrowTextStyle}" Text="提醒时间" />
+                                                <TextBlock Style="{StaticResource DashboardMetricCaptionTextStyle}" Text="把常用的提醒窗口固定下来，减少频繁调整。" />
+                                            </StackPanel>
+                                        </Grid>
+                                        <Grid x:Name="ReminderInputGrid" ColumnSpacing="10" RowSpacing="10">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition x:Name="ReminderInputCol1" Width="*" />
+                                                <ColumnDefinition x:Name="ReminderInputCol2" Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <TextBox x:Name="PlanReminderInput" Width="160" Header="新增时间" Text="{Binding NewReminderTimeText, Mode=TwoWay}" PlaceholderText="HH:mm" />
+                                            <Button x:Name="PlanReminderAddButton" Grid.Column="1" VerticalAlignment="Bottom" Command="{Binding AddReminderTimeCommand}" Content="添加" Style="{StaticResource SubtleButtonStyle}" />
+                                        </Grid>
+                                        <ListView ItemsSource="{Binding SelectedPlan.ReminderTimes}" Background="Transparent" BorderThickness="0">
+                                            <ListView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Border Margin="0,0,0,10" Padding="12" Background="{StaticResource DashboardSoftBrush}" BorderBrush="#14000000" BorderThickness="1" CornerRadius="{StaticResource ControlCornerRadius}">
+                                                        <Grid ColumnSpacing="10">
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition Width="220" />
+                                                                <ColumnDefinition Width="Auto" />
+                                                            </Grid.ColumnDefinitions>
+                                                            <TextBox Header="提醒时间" Text="{Binding TimeText, Mode=TwoWay}" />
+                                                            <Button
+                                                                Grid.Column="1"
+                                                                VerticalAlignment="Bottom"
+                                                                Command="{Binding DataContext.RemoveReminderTimeCommand, ElementName=RootLayout}"
+                                                                CommandParameter="{Binding}"
+                                                                Content="移除" />
+                                                        </Grid>
+                                                    </Border>
+                                                </DataTemplate>
+                                            </ListView.ItemTemplate>
+                                        </ListView>
+                                    </StackPanel>
+                                </Border>
+
+                                <StackPanel x:Name="PlanActionButtons" Orientation="Horizontal" Spacing="10">
                                     <Button Command="{Binding SaveNowCommand}" Content="立即保存" Style="{StaticResource AccentButtonStyle}" />
                                     <Button Command="{Binding TestToastCommand}" Content="测试通知" Style="{StaticResource SubtleButtonStyle}" />
                                 </StackPanel>
@@ -243,16 +633,18 @@
                         </ScrollViewer>
                     </Border>
                 </Grid>
-            </TabViewItem>
 
-            <TabViewItem x:Name="TrainingTab" Header="训练">
-                <Grid ColumnSpacing="16" Padding="8">
+                <Grid x:Name="TrainingContent" Visibility="Collapsed" ColumnSpacing="16" RowSpacing="16" Padding="24,20,24,24">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1.2*" />
-                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition x:Name="TrainingShellCol1" Width="1.2*" />
+                        <ColumnDefinition x:Name="TrainingShellCol2" Width="*" />
                     </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
 
-                    <Border Grid.Column="0" Style="{StaticResource CardBorderStyle}" Background="{StaticResource BrandSandBrush}">
+                    <Border x:Name="TrainingVisualizerCard" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource CardBorderStyle}" Background="{StaticResource BrandSandBrush}">
                         <Grid RowSpacing="16">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto" />
@@ -260,114 +652,200 @@
                                 <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
 
-                            <StackPanel>
-                                <TextBlock Style="{StaticResource EyebrowTextStyle}" Text="训练节律" />
-                                <TextBlock Style="{StaticResource SectionTitleTextStyle}" Text="{Binding CurrentPhaseText}" />
-                                <TextBlock Foreground="{StaticResource MutedTextBrush}" Text="{Binding CurrentPhaseHint}" TextWrapping="Wrap" />
-                            </StackPanel>
-
-                            <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                <Ellipse
-                                    Width="250"
-                                    Height="250"
-                                    Fill="{StaticResource BrandMintBrush}"
-                                    Opacity="{Binding HaloOpacity}">
-                                    <Ellipse.RenderTransform>
-                                        <ScaleTransform CenterX="125" CenterY="125" ScaleX="{Binding HaloScale}" ScaleY="{Binding HaloScale}" />
-                                    </Ellipse.RenderTransform>
-                                </Ellipse>
-                                <Ellipse Width="190" Height="190" Fill="{StaticResource BrandCoralBrush}">
-                                    <Ellipse.RenderTransform>
-                                        <ScaleTransform CenterX="95" CenterY="95" ScaleX="{Binding PulseScale}" ScaleY="{Binding PulseScale}" />
-                                    </Ellipse.RenderTransform>
-                                </Ellipse>
-                                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="6">
-                                    <TextBlock HorizontalAlignment="Center" FontSize="36" FontWeight="SemiBold" Foreground="White" Text="{Binding RemainingText}" />
-                                    <TextBlock HorizontalAlignment="Center" Foreground="White" Text="{Binding CycleText}" />
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Spacing="4">
+                                    <TextBlock Style="{StaticResource EyebrowTextStyle}" Text="训练节律" />
+                                    <TextBlock FontSize="28" FontWeight="SemiBold" Text="{Binding CurrentPhaseText}" />
+                                    <TextBlock x:Name="TrainingPhaseHintText" FontSize="14" Foreground="{StaticResource MutedTextBrush}" Text="{Binding CurrentPhaseHint}" TextWrapping="Wrap" Margin="0,4,0,0" />
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="8" VerticalAlignment="Top">
+                                    <Button Width="36" Height="36" Command="{Binding SetAnimationModeCommand}" CommandParameter="PulseOrb" ToolTipService.ToolTip="Pulse Orb">
+                                        <TextBlock FontSize="18" Text="◉" />
+                                    </Button>
+                                    <Button Width="36" Height="36" Command="{Binding SetAnimationModeCommand}" CommandParameter="VerticalLift" ToolTipService.ToolTip="Vertical Lift">
+                                        <TextBlock FontSize="18" Text="⇅" />
+                                    </Button>
                                 </StackPanel>
                             </Grid>
 
-                            <StackPanel Grid.Row="2" Spacing="12">
-                                <ProgressBar Minimum="0" Maximum="1" Value="{Binding SessionProgress}" />
-                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
-                                    <Button Command="{Binding StartTrainingCommand}" Content="开始训练" Style="{StaticResource AccentButtonStyle}" />
-                                    <Button Command="{Binding StopTrainingCommand}" Content="停止" Style="{StaticResource SubtleButtonStyle}" />
+                            <Grid Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <Grid Visibility="{Binding IsPulseOrbMode, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                    <Ellipse Width="270" Height="270" Fill="{StaticResource BrandMintBrush}" Opacity="{Binding HaloOpacity}">
+                                        <Ellipse.RenderTransform>
+                                            <ScaleTransform CenterX="135" CenterY="135" ScaleX="{Binding HaloScale}" ScaleY="{Binding HaloScale}" />
+                                        </Ellipse.RenderTransform>
+                                    </Ellipse>
+                                    <Ellipse Width="222" Height="222" Fill="Transparent" Stroke="{StaticResource BrandCoralBrush}" StrokeThickness="2.5" Opacity="0.35" />
+                                    <Ellipse Width="200" Height="200" Fill="{StaticResource BrandCoralBrush}">
+                                        <Ellipse.RenderTransform>
+                                            <ScaleTransform CenterX="100" CenterY="100" ScaleX="{Binding PulseScale}" ScaleY="{Binding PulseScale}" />
+                                        </Ellipse.RenderTransform>
+                                    </Ellipse>
+                                </Grid>
+
+                                <Grid Width="280" Height="300" Visibility="{Binding IsVerticalLiftMode, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                    <Border Width="140" Height="246" CornerRadius="70" Background="{StaticResource BrandMintBrush}" Opacity="0.18" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Border.RenderTransform>
+                                            <ScaleTransform CenterX="70" CenterY="123" ScaleX="{Binding LiftGlowScale}" ScaleY="{Binding LiftGlowScale}" />
+                                        </Border.RenderTransform>
+                                    </Border>
+                                    <Border Width="44" Height="156" CornerRadius="22" Background="{StaticResource BrandCoralBrush}" Opacity="{Binding LiftTrailOpacity}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Border.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform CenterX="22" CenterY="78" ScaleY="{Binding LiftGlowScale}" />
+                                                <TranslateTransform Y="{Binding LiftOffsetY}" />
+                                            </TransformGroup>
+                                        </Border.RenderTransform>
+                                    </Border>
+                                    <Grid Width="96" Height="214" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Grid.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform CenterX="48" CenterY="107" ScaleX="{Binding LiftBodyScaleX}" ScaleY="{Binding LiftScaleY}" />
+                                                <TranslateTransform Y="{Binding LiftOffsetY}" />
+                                            </TransformGroup>
+                                        </Grid.RenderTransform>
+                                        <Border Width="78" Height="152" CornerRadius="39" Background="{StaticResource BrandCoralBrush}" Opacity="{Binding LiftCoreOpacity}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        <Ellipse Width="78" Height="52" Fill="{StaticResource BrandCoralBrush}" Opacity="{Binding LiftCoreOpacity}" HorizontalAlignment="Center" VerticalAlignment="Top">
+                                            <Ellipse.RenderTransform>
+                                                <ScaleTransform CenterX="39" CenterY="26" ScaleX="{Binding LiftTopScale}" ScaleY="{Binding LiftTopScale}" />
+                                            </Ellipse.RenderTransform>
+                                        </Ellipse>
+                                        <Ellipse Width="78" Height="28" Fill="{StaticResource BrandCoralBrush}" Opacity="0.82" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                                            <Ellipse.RenderTransform>
+                                                <ScaleTransform CenterX="39" CenterY="14" ScaleX="{Binding LiftBaseScale}" ScaleY="{Binding LiftBaseScale}" />
+                                            </Ellipse.RenderTransform>
+                                        </Ellipse>
+                                    </Grid>
+                                </Grid>
+
+                                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="4" Visibility="{Binding IsPulseOrbMode, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                    <TextBlock HorizontalAlignment="Center" FontSize="48" FontWeight="Bold" Foreground="White" Text="{Binding RemainingText}" />
+                                    <TextBlock HorizontalAlignment="Center" FontSize="15" Foreground="White" Opacity="0.85" Text="{Binding CycleText}" />
                                 </StackPanel>
+                                <StackPanel Width="128" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="2" Visibility="{Binding IsVerticalLiftMode, Converter={StaticResource BooleanToVisibilityConverter}}">
+                                    <TextBlock HorizontalAlignment="Center" TextAlignment="Center" FontSize="38" FontWeight="Bold" Foreground="White" Text="{Binding RemainingText}" TextWrapping="NoWrap" />
+                                    <TextBlock HorizontalAlignment="Center" TextAlignment="Center" FontSize="14" Foreground="White" Opacity="0.85" Text="{Binding CycleText}" />
+                                </StackPanel>
+                            </Grid>
+
+                            <StackPanel Grid.Row="2" Spacing="14">
+                                <StackPanel Spacing="6">
+                                    <TextBlock FontSize="12" Foreground="{StaticResource MutedTextBrush}" Text="本组进度" />
+                                    <ProgressBar Height="8" Minimum="0" Maximum="1" Value="{Binding SessionProgress}" />
+                                </StackPanel>
+                                <Grid ColumnSpacing="12">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Button
+                                        Grid.Column="0"
+                                        HorizontalAlignment="Stretch"
+                                        Command="{Binding StartTrainingCommand}"
+                                        Content="开始训练"
+                                        Style="{StaticResource AccentButtonStyle}"
+                                        Visibility="{Binding IsTrainingActive, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter=Invert}" />
+                                    <Button
+                                        Grid.Column="0"
+                                        HorizontalAlignment="Stretch"
+                                        Command="{Binding StopTrainingCommand}"
+                                        Content="停止"
+                                        Style="{StaticResource SubtleButtonStyle}"
+                                        Visibility="{Binding IsTrainingActive, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                                </Grid>
                             </StackPanel>
                         </Grid>
                     </Border>
 
-                    <Border Grid.Column="1" Style="{StaticResource CardBorderStyle}">
-                        <StackPanel Spacing="14">
-                            <TextBlock Style="{StaticResource SectionTitleTextStyle}" Text="当前计划" />
-                            <TextBlock FontSize="20" FontWeight="SemiBold" Text="{Binding SelectedPlan.Name}" />
-                            <TextBlock Foreground="{StaticResource MutedTextBrush}" Text="{Binding SelectedPlan.Description}" TextWrapping="Wrap" />
-                            <TextBlock Foreground="{StaticResource BrandSageBrush}" Text="{Binding SelectedPlan.DurationSummary}" TextWrapping="Wrap" />
-                            <TextBlock Foreground="{StaticResource MutedTextBrush}" Text="收紧阶段保持轻柔上提并自然呼吸；放松阶段完全释放，不持续夹紧。" TextWrapping="Wrap" />
-                            <ToggleSwitch Header="降低动画强度" IsOn="{Binding Settings.ReduceMotion, Mode=TwoWay}" />
-                            <Button Click="OnHideToTrayClick" Content="训练时隐藏到后台" />
-                        </StackPanel>
+                    <Border x:Name="TrainingSideCard" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource CardBorderStyle}">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto">
+                            <StackPanel Spacing="16">
+                                <TextBlock Style="{StaticResource EyebrowTextStyle}" Text="当前计划" />
+                                <TextBlock FontSize="22" FontWeight="SemiBold" Text="{Binding SelectedPlan.Name}" TextWrapping="Wrap" />
+                                <TextBlock x:Name="TrainingPlanDescriptionText" FontSize="14" Foreground="{StaticResource MutedTextBrush}" Text="{Binding SelectedPlan.Description}" TextWrapping="Wrap" />
+
+                                <Border Background="{StaticResource BrandSandBrush}" CornerRadius="{StaticResource ControlCornerRadius}" Padding="14,12">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <StackPanel Grid.Column="0" HorizontalAlignment="Center" Spacing="2">
+                                            <TextBlock HorizontalAlignment="Center" FontSize="22" FontWeight="SemiBold" Text="{Binding SelectedPlan.ContractSeconds}" />
+                                            <TextBlock HorizontalAlignment="Center" FontSize="11" Foreground="{StaticResource MutedTextBrush}" Text="收紧 s" />
+                                        </StackPanel>
+                                        <Border Grid.Column="1" Width="1" Margin="4,4" Background="{StaticResource StrokeSoftBrush}" />
+                                        <StackPanel Grid.Column="2" HorizontalAlignment="Center" Spacing="2">
+                                            <TextBlock HorizontalAlignment="Center" FontSize="22" FontWeight="SemiBold" Text="{Binding SelectedPlan.RelaxSeconds}" />
+                                            <TextBlock HorizontalAlignment="Center" FontSize="11" Foreground="{StaticResource MutedTextBrush}" Text="放松 s" />
+                                        </StackPanel>
+                                        <Border Grid.Column="3" Width="1" Margin="4,4" Background="{StaticResource StrokeSoftBrush}" />
+                                        <StackPanel Grid.Column="4" HorizontalAlignment="Center" Spacing="2">
+                                            <TextBlock HorizontalAlignment="Center" FontSize="22" FontWeight="SemiBold" Text="{Binding SelectedPlan.Cycles}" />
+                                            <TextBlock HorizontalAlignment="Center" FontSize="11" Foreground="{StaticResource MutedTextBrush}" Text="轮数" />
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
+
+                                <TextBlock FontSize="13" Foreground="{StaticResource BrandSageBrush}" Text="{Binding SelectedPlan.DurationSummary}" TextWrapping="Wrap" />
+                                <Border Height="1" Background="{StaticResource StrokeSoftBrush}" />
+                                <TextBlock x:Name="TrainingGuidanceText" FontSize="13" Foreground="{StaticResource MutedTextBrush}" Text="收紧阶段保持轻柔上提并自然呼吸；放松阶段完全释放，不持续夹紧。" TextWrapping="Wrap" />
+                                <Border Height="1" Background="{StaticResource StrokeSoftBrush}" />
+                                <ToggleSwitch Header="降低动画强度" IsOn="{Binding Settings.ReduceMotion, Mode=TwoWay}" />
+                                <Button HorizontalAlignment="Stretch" Click="OnHideToTrayClick" Content="训练时隐藏到后台" Style="{StaticResource SubtleButtonStyle}" />
+                            </StackPanel>
+                        </ScrollViewer>
                     </Border>
                 </Grid>
-            </TabViewItem>
 
-            <TabViewItem Header="AI 工坊">
-                <Grid ColumnSpacing="16" Padding="8">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1.2*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-
-                    <Border Grid.Column="0" Style="{StaticResource CardBorderStyle}">
+                <Grid x:Name="AiContent" Visibility="Collapsed" Padding="24,20,24,24">
+                    <Border Style="{StaticResource CardBorderStyle}">
                         <StackPanel Spacing="16">
                             <TextBlock Style="{StaticResource SectionTitleTextStyle}" Text="AI 计划生成" />
                             <TextBox Header="训练目标" Text="{Binding AiGoalPrompt, Mode=TwoWay}" AcceptsReturn="True" TextWrapping="Wrap" />
-                            <Grid ColumnSpacing="12">
+                            <Grid ColumnSpacing="12" RowSpacing="12">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition x:Name="AiMetaCol1" Width="*" />
+                                    <ColumnDefinition x:Name="AiMetaCol2" Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <ComboBox Grid.Column="0" Header="经验等级" SelectedItem="{Binding AiExperienceLevel, Mode=TwoWay}">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <ComboBox x:Name="AiExperienceBox" Grid.Column="0" Header="经验等级" SelectedItem="{Binding AiExperienceLevel, Mode=TwoWay}">
                                     <x:String>入门</x:String>
                                     <x:String>稳定期</x:String>
                                     <x:String>进阶</x:String>
                                 </ComboBox>
-                                <NumberBox Grid.Column="1" Header="可用分钟数" Minimum="3" Maximum="20" Value="{Binding AiAvailableMinutes, Mode=TwoWay}" />
+                                <NumberBox x:Name="AiMinutesBox" Grid.Column="1" Header="可用分钟数" Minimum="3" Maximum="20" Value="{Binding AiAvailableMinutes, Mode=TwoWay}" />
                             </Grid>
-                            <StackPanel Orientation="Horizontal" Spacing="10">
+                            <StackPanel x:Name="AiActionButtons" Orientation="Horizontal" Spacing="10">
                                 <Button Command="{Binding GenerateAiPlanCommand}" Content="生成计划" Style="{StaticResource AccentButtonStyle}" />
                                 <Button Command="{Binding ApplyAiPlanCommand}" Content="应用到当前计划" Style="{StaticResource SubtleButtonStyle}" />
                             </StackPanel>
                             <TextBlock Foreground="{StaticResource BrandSageBrush}" Text="{Binding AiStatus}" />
-                            <Border Padding="16" Background="{StaticResource BrandSandBrush}" CornerRadius="18">
+                            <Border Padding="16" Background="{StaticResource BrandSandBrush}" CornerRadius="{StaticResource CardCornerRadius}">
                                 <TextBlock Text="{Binding AiOutput}" TextWrapping="Wrap" />
                             </Border>
                         </StackPanel>
                     </Border>
-
-                    <Border Grid.Column="1" Style="{StaticResource CardBorderStyle}">
-                        <StackPanel Spacing="14">
-                            <TextBlock Style="{StaticResource SectionTitleTextStyle}" Text="OpenAI 兼容配置" />
-                            <TextBox Header="Endpoint" Text="{Binding Settings.AiSettings.Endpoint, Mode=TwoWay}" />
-                            <TextBox Header="Model" Text="{Binding Settings.AiSettings.Model, Mode=TwoWay}" />
-                            <TextBox Header="API Key" Text="{Binding Settings.AiSettings.ApiKey, Mode=TwoWay}" />
-                            <TextBox Header="System Prompt" Text="{Binding Settings.AiSettings.SystemPrompt, Mode=TwoWay}" AcceptsReturn="True" TextWrapping="Wrap" />
-                            <TextBlock Foreground="{StaticResource MutedTextBrush}" Text="未配置 API 时会回退到本地建议计划，配置后即可生成真正的 AI 节律建议。" TextWrapping="Wrap" />
-                        </StackPanel>
-                    </Border>
                 </Grid>
-            </TabViewItem>
 
-            <TabViewItem Header="设置">
-                <ScrollViewer VerticalScrollBarVisibility="Auto">
-                    <StackPanel Spacing="18" Padding="8">
+                <ScrollViewer x:Name="SettingsContent" Visibility="Collapsed" VerticalScrollBarVisibility="Auto">
+                    <StackPanel Spacing="18" Padding="24,20,24,24">
                         <Border Style="{StaticResource CardBorderStyle}">
                             <StackPanel Spacing="14">
                                 <TextBlock Style="{StaticResource SectionTitleTextStyle}" Text="后台与系统交互" />
                                 <ToggleSwitch Header="关闭窗口时转入托盘" IsOn="{Binding Settings.CloseToTray, Mode=TwoWay}" />
                                 <ToggleSwitch Header="最小化时转入托盘" IsOn="{Binding Settings.MinimizeToTray, Mode=TwoWay}" />
                                 <ToggleSwitch Header="降低动画强度" IsOn="{Binding Settings.ReduceMotion, Mode=TwoWay}" />
-                                <StackPanel Orientation="Horizontal" Spacing="10">
+                                <StackPanel x:Name="SettingsActionButtons" Orientation="Horizontal" Spacing="10">
                                     <Button Command="{Binding SaveNowCommand}" Content="保存设置" Style="{StaticResource AccentButtonStyle}" />
                                     <Button Click="OnHideToTrayClick" Content="现在隐藏到托盘" Style="{StaticResource SubtleButtonStyle}" />
                                 </StackPanel>
@@ -381,9 +859,29 @@
                                 <TextBlock Foreground="{StaticResource MutedTextBrush}" Text="当前版本已经支持本地历史统计、AI 计划生成、托盘菜单、通知跳转训练页和计划自动重排。" TextWrapping="Wrap" />
                             </StackPanel>
                         </Border>
+
+                        <Border Style="{StaticResource CardBorderStyle}">
+                            <StackPanel Spacing="14">
+                                <TextBlock Style="{StaticResource SectionTitleTextStyle}" Text="AI 高级设置" />
+                                <TextBlock Foreground="{StaticResource MutedTextBrush}" Text="需要接入兼容接口时再展开配置。未配置时会回退到本地建议计划。" TextWrapping="Wrap" />
+                                <Expander Header="OpenAI 兼容配置">
+                                    <StackPanel Spacing="14" Padding="0,14,0,0">
+                                        <TextBox Header="Endpoint" Text="{Binding Settings.AiSettings.Endpoint, Mode=TwoWay}" />
+                                        <TextBox Header="Model" Text="{Binding Settings.AiSettings.Model, Mode=TwoWay}" />
+                                        <PasswordBox
+                                            x:Name="ApiKeyPasswordBox"
+                                            Header="API Key"
+                                            Loaded="ApiKeyPasswordBox_Loaded"
+                                            PasswordChanged="ApiKeyPasswordBox_PasswordChanged" />
+                                        <TextBox Header="System Prompt" Text="{Binding Settings.AiSettings.SystemPrompt, Mode=TwoWay}" AcceptsReturn="True" TextWrapping="Wrap" />
+                                        <TextBlock Foreground="{StaticResource MutedTextBrush}" Text="配置后即可生成真实的 AI 节律建议。" TextWrapping="Wrap" />
+                                    </StackPanel>
+                                </Expander>
+                            </StackPanel>
+                        </Border>
                     </StackPanel>
                 </ScrollViewer>
-            </TabViewItem>
-        </TabView>
+            </Grid>
+        </NavigationView>
     </Grid>
 </Window>
